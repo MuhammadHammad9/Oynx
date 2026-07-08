@@ -42,6 +42,15 @@ Optional values:
 For Supabase, set `DATABASE_URL` to the Supabase Postgres connection string from your project settings. Use the pooled connection string for serverless deploys when possible.
 The private uploads bucket is `uploads` and is used by the Supabase Storage helpers.
 
+## Deployment Layout
+
+This repository is split into two deployable apps:
+
+- `frontend/` is the Vercel website
+- `backend/` is the separate server app
+
+For a new Vercel project, choose `frontend/` as the root directory. Do not deploy the repository root for the website, because the repo root contains legacy duplicate files and can lead to a `404: NOT_FOUND` deployment.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
