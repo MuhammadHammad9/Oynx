@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ONYX INTERACTIVE — DESIGN SYSTEM TOKENS (Tailwind CSS v4)
+   Brand: White #FFFFFF · Onyx Blue #0BBDF4 · Black #000000
+   ============================================================ */
+
+@theme {
+  /* ─── Brand Colors ─── */
+  --color-onyx-blue:        #0BBDF4;
+  --color-onyx-blue-light:  #4DD4FA;
+  --color-onyx-blue-dark:   #0891C7;
+  --color-onyx-black:       #000000;
+  --color-onyx-white:       #FFFFFF;
+
+  /* ─── Neutral Scale ─── */
+  --color-neutral-950:  #0a0a0a;
+  --color-neutral-900:  #111111;
+  --color-neutral-800:  #1c1c1c;
+  --color-neutral-700:  #2e2e2e;
+  --color-neutral-600:  #4a4a4a;
+  --color-neutral-500:  #6b6b6b;
+  --color-neutral-400:  #909090;
+  --color-neutral-300:  #b5b5b5;
+  --color-neutral-200:  #d4d4d4;
+  --color-neutral-100:  #ebebeb;
+  --color-neutral-50:   #f7f7f7;
+
+  /* ─── Semantic Colors ─── */
+  --color-success:  #22c55e;
+  --color-warning:  #f59e0b;
+  --color-danger:   #ef4444;
+  --color-info:     #0BBDF4;
+
+  /* ─── Typography ─── */
+  --font-sans:  "Neue Haas Grotesk Text Pro", "Suisse Int'l", "Suisse International", "Helvetica Neue", "Inter", system-ui, sans-serif;
+  --font-mono:  "Consolas", "SFMono-Regular", "Fira Code", monospace;
+
+  /* ─── Font Sizes (type scale) ─── */
+  --font-size-display: clamp(3rem, 6vw, 5rem);
+  --font-size-h1:      clamp(2rem, 4vw, 3.5rem);
+  --font-size-h2:      clamp(1.5rem, 3vw, 2.5rem);
+  --font-size-h3:      clamp(1.25rem, 2vw, 1.75rem);
+  --font-size-body:    1rem;
+  --font-size-sm:      0.875rem;
+  --font-size-xs:      0.75rem;
+
+  /* ─── Spacing ─── */
+  --spacing-section:  6rem;
+  --spacing-content:  1.5rem;
+
+  /* ─── Border Radius ─── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-glow-blue: 0 0 40px rgba(11, 189, 244, 0.3);
+  --shadow-glow-sm:   0 0 20px rgba(11, 189, 244, 0.15);
+  --shadow-card:      0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-ring:      0 0 0 3px rgba(11, 189, 244, 0.4);
+
+  /* ─── Animation Easings (Emil Kowalski) ─── */
+  --ease-out-strong:    cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer:        cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* ─── Theme Mapped Colors ─── */
+  --color-fg:               var(--fg);
+  --color-fg-muted:         var(--fg-muted);
+  --color-fg-subtle:        var(--fg-subtle);
+  --color-bg:               var(--bg);
+  --color-bg-subtle:        var(--bg-subtle);
+  --color-bg-card:          var(--bg-card);
+  --color-bg-card-hover:    var(--bg-card-hover);
+  --color-border:           var(--border);
+  --color-border-hover:     var(--border-hover);
+}
+
+/* ─── Semantic Design Tokens (Dark mode default) ─── */
+:root {
+  --bg:            #000000;
+  --bg-subtle:     #0a0a0a;
+  --bg-card:       rgba(17, 17, 17, 0.6);
+  --bg-card-hover: rgba(28, 28, 28, 0.7);
+  --border:        rgba(255, 255, 255, 0.06);
+  --border-hover:  rgba(255, 255, 255, 0.12);
+  --fg:            #ffffff;
+  --fg-muted:      rgba(255, 255, 255, 0.55);
+  --fg-subtle:     rgba(255, 255, 255, 0.30);
+  --nav-bg:        rgba(0, 0, 0, 0);
+  --nav-bg-scroll: rgba(0, 0, 0, 0.88);
+  --nav-border:    rgba(255, 255, 255, 0.06);
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #2e2e2e;
+  --accent:        #0BBDF4;
+  --accent-light:  #4DD4FA;
+  --section-alt:   rgba(10, 10, 10, 0.4);
+}
+
+/* ─── Light Mode Tokens ─── */
+html.light {
+  --bg:            #f5f7fa;
+  --bg-subtle:     #eef1f5;
+  --bg-card:       rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --border:        rgba(0, 0, 0, 0.08);
+  --border-hover:  rgba(0, 0, 0, 0.16);
+  --fg:            #0a0a0a;
+  --fg-muted:      rgba(0, 0, 0, 0.55);
+  --fg-subtle:     rgba(0, 0, 0, 0.35);
+  --nav-bg:        rgba(245, 247, 250, 0);
+  --nav-bg-scroll: rgba(245, 247, 250, 0.92);
+  --nav-border:    rgba(0, 0, 0, 0.08);
+  --scrollbar-track: #eef1f5;
+  --scrollbar-thumb: #c0c8d4;
+  --accent:        #0891C7;
+  --accent-light:  #0BBDF4;
+  --section-alt:   rgba(230, 235, 240, 0.6);
+  --scroll-card-bg: #ffffff;
+}
+
+:root {
+  --scroll-card-bg: #111111;
+}
+
+/* ─── Base Styles ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Typography Defaults ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--fg);
+}
+
+/* ─── Focus Ring (Accessibility) ─── */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-ring);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-onyx-blue);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: rgba(11, 189, 244, 0.25);
+  color: var(--fg);
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Light mode text overrides for hardcoded text-white classes ─── */
+html.light .light-text-invert {
+  color: var(--fg) !important;
+}
+html.light .light-border-invert {
+  border-color: var(--border) !important;
+}
+
+/* ─── Performance: GPU Compositing ─── */
+/* Force GPU layer for animated/parallax elements */
+[data-parallax],
+canvas {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Improve scroll performance globally */
+html {
+  /* Native smooth scroll is slow on heavy pages — we handle it in JS */
+  scroll-behavior: auto;
+}
+
+/* Optimize images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(110deg, var(--bg-subtle) 8%, var(--bg-card-hover) 18%, var(--bg-subtle) 33%);
+  background-size: 220% 100%;
+  border: 1px solid var(--border);
+  animation: skeleton-shimmer 1.15s var(--ease-out-strong) infinite;
+}
+
+@keyframes skeleton-shimmer {
+  to {
+    background-position-x: -220%;
+  }
+}
+
+/* content-visibility: optimize sections below fold */
+.section-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
+/* ─── Hero Shader Canvas ─── */
+.shader-canvas {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ─── Framer Motion — hint browser to promote animated elements ─── */
+.motion-safe {
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Only apply will-change hints when animations are allowed */
+  [data-framer-appear],
+  [data-framer-motion] {
+    will-change: transform, opacity;
+  }
+}

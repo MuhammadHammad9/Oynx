@@ -1,0 +1,32 @@
+import { FlatCompat } from "@eslint/eslintrc";
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals"),
+  ...compat.extends("next/typescript"),
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "off",
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-img-element": "off"
+    }
+  },
+  {
+    ignores: [
+      ".next/**",
+      "**/.next/**",
+      "out/**",
+      "build/**",
+      "**/out/**",
+      "**/build/**",
+      "next-env.d.ts",
+      "**/next-env.d.ts"
+    ]
+  }
+];
+
+export default eslintConfig;
