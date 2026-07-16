@@ -46,7 +46,8 @@ const nextConfig: NextConfig = {
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
       "style-src 'self' 'unsafe-inline'",
-      "script-src 'self'",
+      "script-src 'self' 'unsafe-inline'",
+      "frame-src 'self' https://www.google.com",
       "connect-src 'self' https:",
     ].join("; ");
 

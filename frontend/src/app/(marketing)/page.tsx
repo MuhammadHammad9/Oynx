@@ -288,7 +288,7 @@ export default function HomePage() {
           className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center"
         >
           {/* Status badge */}
-          <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
+          <motion.div variants={fadeUp} initial={false} animate="show" custom={0}>
             <Badge variant="blue" className="mb-8 py-1.5 px-4">
               <span className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
@@ -303,7 +303,7 @@ export default function HomePage() {
           {/* Headline */}
           <motion.h1
             variants={fadeUp}
-            initial="hidden"
+            initial={false}
             animate="show"
             custom={1}
             className="text-[clamp(2.75rem,7vw,6rem)] font-bold tracking-tight leading-[1.02] mb-6 text-white"
@@ -323,7 +323,7 @@ export default function HomePage() {
 
           <motion.p
             variants={fadeUp}
-            initial="hidden"
+            initial={false}
             animate="show"
             custom={2}
             className="max-w-2xl text-lg md:text-xl leading-relaxed mb-10 text-white/90 font-medium"
@@ -336,7 +336,7 @@ export default function HomePage() {
 
           <motion.div
             variants={fadeUp}
-            initial="hidden"
+            initial={false}
             animate="show"
             custom={3}
             className="flex flex-col sm:flex-row gap-4 items-center"

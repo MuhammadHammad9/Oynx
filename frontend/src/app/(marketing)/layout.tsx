@@ -18,7 +18,7 @@ export default function MarketingLayout({
       <main className="flex-1 flex flex-col pt-0">
         <motion.div
           key={pathname}
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
+          initial={false}
           animate={{ opacity: 1, transform: "translateY(0)" }}
           transition={{
             duration: 0.18,
