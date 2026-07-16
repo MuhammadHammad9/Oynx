@@ -1,17 +1,13 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "oynx-interactive",
+    "name": "oynx-interactive", // Ensure this matches your project name in Cloudflare
     "compatibility_date": "2026-07-16",
-    "observability": {
-        "enabled": true
-    },
     "compatibility_flags": [
         "nodejs_compat"
     ],
     "services": [
         {
             "binding": "WORKER_SELF_REFERENCE",
-            "service": "oynx-interactive"
+            "service": "oynx-interactive" // Ensure this matches your project name
         }
     ]
 }
