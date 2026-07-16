@@ -1,0 +1,17 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "oynx-interactive",
+    "compatibility_date": "2026-07-16",
+    "observability": {
+        "enabled": true
+    },
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "services": [
+        {
+            "binding": "WORKER_SELF_REFERENCE",
+            "service": "oynx-interactive"
+        }
+    ]
+}
