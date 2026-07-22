@@ -61,6 +61,8 @@ const ProfileCardComponent = ({
   showUserInfo = true,
   onContactClick
 }: ProfileCardProps) => {
+  // Always display only the first name in the handle to avoid overflow
+  const firstName = name ? name.trim().split(/\s+/)[0] : 'User';
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const shellRef = useRef<HTMLDivElement | null>(null);
 
@@ -365,7 +367,7 @@ const ProfileCardComponent = ({
                       />
                     </div>
                     <div className="pc-user-text">
-                      <div className="pc-handle">@{handle}</div>
+                      <div className="pc-handle">@{firstName}</div>
                       <div className="pc-status">{status}</div>
                     </div>
                   </div>

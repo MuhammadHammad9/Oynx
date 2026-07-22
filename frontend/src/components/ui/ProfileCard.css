@@ -27,7 +27,7 @@
   --sunpillar-clr-4: var(--sunpillar-4);
   --sunpillar-clr-5: var(--sunpillar-5);
   --sunpillar-clr-6: var(--sunpillar-6);
-  --card-radius: 30px;
+  --card-radius: 16px;
 }
 
 .pc-card-wrapper {
@@ -280,11 +280,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: calc(max(0px, var(--card-radius) - var(--ui-inset) + var(--ui-radius-bias)));
+  border-radius: 8px;
   padding: 12px 14px;
   pointer-events: auto;
   overflow: hidden;
@@ -341,15 +342,16 @@
 }
 
 .pc-contact-btn {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 10px 14px;
   font-size: 12px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
   transition:
     border-color 160ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1)),
     transform 160ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1));
@@ -484,6 +486,7 @@
   .pc-contact-btn {
     padding: 6px 12px;
     font-size: 11px;
+    border-radius: 8px;
   }
 }
 
@@ -530,7 +533,7 @@
   .pc-contact-btn {
     padding: 5px 10px;
     font-size: 10px;
-    border-radius: 50px;
+    border-radius: 8px;
   }
 }
 
@@ -572,6 +575,6 @@
   .pc-contact-btn {
     padding: 4px 8px;
     font-size: 9px;
-    border-radius: 50px;
+    border-radius: 8px;
   }
 }
