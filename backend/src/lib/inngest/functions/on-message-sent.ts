@@ -9,7 +9,13 @@ import { eq } from "drizzle-orm";
 import { Resend } from "resend";
 import { getPublicAppUrl, getRequiredEnv } from "@/lib/env";
 
-const resend = new Resend(getRequiredEnv("RESEND_API_KEY"));
+let resendClient: Resend | null = null;
+function getResend() {
+  if (!resendClient) {
+    resendClient = new Resend(getRequiredEnv("RESEND_API_KEY"));
+  }
+  return resendClient;
+}
 
 /**
  * Escapes a string for safe interpolation into an HTML document.
@@ -126,7 +132,7 @@ export const onMessageSent = inngest.createFunction(
           const logoUrl = appUrl ? `${appUrl}/logo.png` : "/logo.png";
           const threadUrl = appUrl ? `${appUrl}/portal/projects/${projectId}?tab=messages` : `/portal/projects/${projectId}?tab=messages`;
 
-          await resend.emails.send({
+          await getResend().emails.send({
             from: "Onyx Portal <notifications@onyx.app>",
             to: recipient.email,
             subject: `New message in ${safeProjectName}`,
