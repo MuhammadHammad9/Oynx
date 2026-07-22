@@ -21,7 +21,7 @@ const MEMBER_DEPARTMENT: Record<string, string> = {
   "Talha Mujahid": "Operations",
   "Muhammad Hammad": "Engineering",
   "Hafsa Azhar": "Interns",
-  "Muhammad Ehtisham Anwar": "Interns",
+  "Muhammad Ehtisham": "Interns",
   "Anum Shahzadi": "Interns",
   "Naveed Ahmed": "Interns",
 };

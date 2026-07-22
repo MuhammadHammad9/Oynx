@@ -80,9 +80,9 @@ export const CORE_TEAM = [
     skills: ["Digital Marketing", "Content Strategy", "SEO", "Social Media"],
   },
   {
-    name: "Muhammad Ehtisham Anwar",
+    name: "Muhammad Ehtisham",
     title: "Fullstack Intern",
-    handle: "@muhammadehtishamanwar",
+    handle: "@muhammadehtisham",
     status: "Online",
     avatarUrl: "/team/muhammad-ehtisham-anwar.png",
     linkedin: "https://linkedin.com/in/muhammadehtishamanwar",
