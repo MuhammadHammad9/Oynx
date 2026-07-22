@@ -261,7 +261,7 @@ export default function AboutPage() {
             subtitle="Our leaders are practitioners who have built and scaled systems, not just career administrators."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {CORE_TEAM.map((member, i) => (
+            {CORE_TEAM.slice(0, 9).map((member, i) => (
               <motion.div
                 key={member.name}
                 variants={fadeUp}

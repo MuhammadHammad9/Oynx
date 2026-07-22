@@ -10,7 +10,7 @@ import ProfileCard from "@/components/ui/ProfileCard";
 import { CORE_TEAM } from "@/lib/team";
 
 /* ─── Department grouping ─── */
-const DEPARTMENTS = ["All", "Leadership", "Operations", "Engineering"] as const;
+const DEPARTMENTS = ["All", "Leadership", "Operations", "Engineering", "Interns"] as const;
 
 const MEMBER_DEPARTMENT: Record<string, string> = {
   "Umair Jadoon": "Leadership",
@@ -20,6 +20,10 @@ const MEMBER_DEPARTMENT: Record<string, string> = {
   "Samiullah Khan": "Operations",
   "Talha Mujahid": "Operations",
   "Muhammad Hammad": "Engineering",
+  "Hafsa Azhar": "Interns",
+  "Muhammad Ehtisham Anwar": "Interns",
+  "Anum Shahzadi": "Interns",
+  "Naveed Ahmed": "Interns",
 };
 
 const fadeUp = {
